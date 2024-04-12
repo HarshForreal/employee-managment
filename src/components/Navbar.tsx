@@ -12,21 +12,39 @@ export default function Navbar({ className }: { className?: string }) {
     >
       <Menu setActive={setActive}>
         <Link href={"/"}>
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item="Home"
+          ></MenuItem>
+        </Link>
+        <Link href={"/"}>
           <MenuItem setActive={setActive} active={active} item="Services">
             <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/all-courses">Web Development</HoveredLink>
-              <HoveredLink href="/all-courses">Block Chain</HoveredLink>
-              <HoveredLink href="/all-courses">UI/UX Design</HoveredLink>
+              <HoveredLink href="/service-webdevelopment">
+                Web Development
+              </HoveredLink>
+              <HoveredLink href="/all-blockchain">Block Chain</HoveredLink>
+              <HoveredLink href="/all-uiux">UI/UX Design</HoveredLink>
             </div>
           </MenuItem>
         </Link>
-        <MenuItem setActive={setActive} active={active} item="Courses">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/all-courses">DSA</HoveredLink>
-            <HoveredLink href="/all-courses">Backend</HoveredLink>
-            <HoveredLink href="/all-courses">Frontend</HoveredLink>
-          </div>
-        </MenuItem>
+        <Link href={"/"}>
+          <MenuItem setActive={setActive} active={active} item="Courses">
+            <div className="flex flex-col space-y-4 text-sm">
+              <HoveredLink href="/courseDsa">DSA</HoveredLink>
+              <HoveredLink href="/courseBackend">Backend</HoveredLink>
+              <HoveredLink href="/courseFrontend">Frontend</HoveredLink>
+            </div>
+          </MenuItem>
+        </Link>
+        <Link href={"/contact"}>
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item="Contact"
+          ></MenuItem>
+        </Link>
       </Menu>
     </div>
   );

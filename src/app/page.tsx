@@ -1,9 +1,8 @@
+import HeroSection from "@/components/HeroSection";
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-center text-xl pt-20">
-        Fycus exmployee tracker
-      </h1>
-    </div>
+    <main className="min-h-screen bg-black/[0.96] antiliased bg-grid-white/[0.02]">
+      <HeroSection />
+    </main>
   );
 }
